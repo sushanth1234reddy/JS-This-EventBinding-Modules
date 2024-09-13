@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation for A college student</title>
+</head>
+<body>
+    <form id="myform" >
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter Username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Password"><br><br>
+        <label for="roll">Roll Number:</label>
+        <input type="text" id="rollnum" placeholder="Enter Roll Number"> <br><br>
+        <label for="mobile">Mobile Number:</label>
+        <input type="number" id="mobile" placeholder="Enter Mobile Number"><br><br>
+        <input type="submit">
+        <p id="hh"></p>
+    </form>
+    <script>
+       let myform=document.getElementById("myform");
+       myform.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let user=document.getElementById("username").value;
+        let pass=document.getElementById("password").value;
+        let roll=document.getElementById("rollnum").value;
+        let mobile=document.getElementById("mobile").value;
+
+        //test
+        let p=document.getElementById("p");
+        p.innerHTML=user;
+       })
+    </script>
+</body>
+</html>
